@@ -1,6 +1,5 @@
 'use client'
 
-import ReactPlayer from 'react-player'
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from 'next/image';
