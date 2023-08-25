@@ -25,7 +25,7 @@ export const Repositories = () => {
                 <div className='container px-5 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
 
                         {repos?.map((repos) => {
-                            return <RepoCard repo={repos}  />
+                            return <RepoCard key={repos.id} repo={repos}  />
                         } )}
                 </div>
             </div>
