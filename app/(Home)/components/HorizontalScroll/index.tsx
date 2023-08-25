@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Image from 'next/image';
 import alienlab from '@/src/assets/alienlab/logo.svg'
 import ip4y from '@/src/assets/ip4y/logo.svg'
+import dinari from '@/src/assets/dinari/big-dinari-logo.svg'
 import { Tag } from '@/src/components/Tag';
 import { Button } from '@/src/components/Button';
 
@@ -14,13 +15,13 @@ const HorizontalScroll = () => {
       target: targetRef,
     });
   
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-73%"]);
   
     return (
       <section ref={targetRef} className="relative h-[300vh] bg-secondary">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex ">
-            <div className="group relative flex flex-col items-center justify-center bg-black h-[100vh] w-[100vw] overflow-hidden ">
+          <motion.div style={{ x }} className="flex gap-1">
+            <div style={{backgroundImage: 'url(/stars.jpg)', backgroundSize:'cover'}} className="group relative flex flex-col items-center justify-center bg-black h-[100vh] w-[100vw] overflow-hidden ">
                 <Image src={alienlab} alt='' ></Image>
                 <p className='mt-3 '>Estágio em desenvolvimento <span className='text-secondary font-semibold'>Front-End</span></p>
                 <p className='mt-3 '>2021 | 2022</p>
@@ -37,10 +38,24 @@ const HorizontalScroll = () => {
                     </video>
                 </div>
             </div>
-            <div style={{backgroundImage: 'linear-gradient(rgba(34, 46, 38, 0.4), rgba(34, 46, 38, 0.4)), url(/ip4y/bg.png)', backgroundSize:'cover'}} className="group bg-opacity-50 bg-black relative flex flex-col items-center justify-center bg-black h-[100vh] w-[100vw] overflow-hidden bg-neutral-200">
+            <div style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0)), url(/ip4y/bg.png)', backgroundSize:'cover'}} className="group   relative flex flex-col items-center justify-center  h-[100vh] w-[100vw] overflow-hidden bg-transparent">
+                <Image src={dinari} alt='' height={70} ></Image>
+                <p className='mt-3 '>Estágio em desenvolvimento <span className='text-secondary font-semibold'>Front-End</span></p>
+
+                <p className='mt-3 '>2022 | 2023</p>
+                <div className='flex gap-3 my-5 flex-wrap justify-center max-w-[400px]'>
+                    <Tag>Laravel</Tag>
+                    <Tag>PHP</Tag>
+                    <Tag>MySql</Tag>
+                </div>
+                <div className='w-full absolute opacity-70 '>
+                    
+                </div>
+            </div>
+            <div style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0)), url(/ip4y/bg.png)', backgroundSize:'cover'}} className="group   relative flex flex-col items-center justify-center  h-[100vh] w-[100vw] overflow-hidden bg-transparent">
                 <Image src={ip4y} alt='' height={70} ></Image>
                 <p className='mt-3 '>Desenvolvedor <span className='text-secondary font-semibold'>Full-Stack</span> Junior</p>
-                <p className='mt-3 '>2022 | 2023</p>
+                <p className='mt-3 '>2023 | <span className="text-secondary font-semibold"> Atualmente</span></p>
                 <div className='flex gap-3 my-5 flex-wrap justify-center max-w-[400px]'>
                     <Tag>Laravel</Tag>
                     <Tag>ReactJs</Tag>
@@ -52,6 +67,7 @@ const HorizontalScroll = () => {
                     
                 </div>
             </div>
+           
             <div className="group  ml-3 relative flex flex-col items-start  justify-center  h-[100vh] w-[100vw] overflow-hidden bg-neutral-900">
                 <div className='pl-20'>
 

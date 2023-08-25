@@ -69,9 +69,17 @@ export const Description = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-6">
+                    <div className="col-span-6 relative">
                         <div className="bg-secondary relative  pl-1">
                             <Image style={{objectFit:"contain"}} src={Pedro} alt="" ></Image>
+                        </div>
+                        <div className="absolute h-[215px] w-[273px] -top-20 -right-14" style={{
+                             background: 'transparent',
+                             backgroundImage: 'radial-gradient(#FFC800 4px, transparent 0)',
+                             backgroundSize: '41px 41px',
+                             backgroundPosition: '-25px -25px'
+                        }}>
+
                         </div>
                     </div>
                 </div>
