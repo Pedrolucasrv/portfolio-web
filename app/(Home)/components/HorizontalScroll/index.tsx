@@ -15,13 +15,13 @@ const HorizontalScroll = () => {
       target: targetRef,
     });
   
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-73%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75.1%"]);
   
     return (
       <section ref={targetRef} className="relative h-[300vh] bg-secondary">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           <motion.div style={{ x }} className="flex gap-1">
-            <div style={{backgroundImage: 'url(/stars.jpg)', backgroundSize:'cover'}} className="group relative flex flex-col items-center justify-center bg-black h-[100vh] w-[100vw] overflow-hidden ">
+            <div className="group relative flex flex-col items-center justify-center bg-black h-[100vh] w-[100vw] overflow-hidden ">
                 <Image src={alienlab} alt='' ></Image>
                 <p className='mt-3 '>Estágio em desenvolvimento <span className='text-secondary font-semibold'>Front-End</span></p>
                 <p className='mt-3 '>2021 | 2022</p>
@@ -68,7 +68,7 @@ const HorizontalScroll = () => {
                 </div>
             </div>
            
-            <div className="group  ml-3 relative flex flex-col items-start  justify-center  h-[100vh] w-[100vw] overflow-hidden bg-neutral-900">
+            <div className="group  ml-3 relative flex flex-col items-start  justify-center  h-[100vh] w-[100vw] overflow-hidden bg-neutral-900 ">
                 <div className='pl-20'>
 
                     <p className='text-2xl mb-4'>A próxima pode ser <span className='text-secondary font-semibold'>sua empresa!</span></p>

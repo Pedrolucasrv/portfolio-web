@@ -3,7 +3,7 @@ export const Footer = () => {
         <div className="w-full bg-stone-900 py-7">
             <div className="container mx-auto flex justify-center items-center">
                 <div>
-                    Desenvolvido por Pedro Lucas Ramos Viana
+                    Desenvolvido por <span className="font-semibold">Pedro Lucas Ramos Viana</span>
                 </div>
             </div>
         </div>

@@ -14,6 +14,7 @@ const config: Config = {
         secondary: '#FFC800',
         grey: '#8892b0',
       },
+      
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

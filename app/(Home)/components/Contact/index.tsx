@@ -1,15 +1,32 @@
+'use client'
+
 import { IoLogoLinkedin,  } from "react-icons/io";
-import { HiOutlineMail,  } from "react-icons/hi";
-import { AiFillGithub,  } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
+import { AiFillGithub  } from "react-icons/ai";
+import { PiSmileyBlankDuotone } from "react-icons/pi";
 import { Button } from "@/src/components/Button";
+import { motion } from "framer-motion";
 
 
 export const Contact = () => {
     return(
-        <div className=" py-[200px] flex justify-center items-center bg-accent">
-            <div className="bg-secondary">
-
-                <div className="grid py-7 bg-accent translate-x-2 border-2 border-secondary -translate-y-2 grid-cols-5 w-full container max-w-[600px] gap-2">
+        <div style={{background:'linear-gradient(391deg, #fdcd3b 50%, #ffed4b 50%)'}} 
+       className=" py-[200px] flex justify-center relative items-center bg-accent">
+            <div className="bg-accent relative cursor-grab ">
+            <div className="absolute flex flex-col justify-center items-center w-full h-full">
+                <p className="text-white font-semibold mt-3">Para de puxar aí, por favor.</p>
+                <PiSmileyBlankDuotone style={{height: 30, width:30}}></PiSmileyBlankDuotone>
+            </div>
+                <motion.div
+                 drag
+                 dragSnapToOrigin
+                 dragConstraints={{
+                   top: -50,
+                   left: -50,
+                   right: 50,
+                   bottom: 50,
+                 }}
+                 className="grid py-7 bg-accent left-2 border-2 relative border-secondary -top-2 grid-cols-5 w-full container max-w-[600px] gap-2">
                     <div className="col-span-4 mx-5">
                         <p className="text-3xl font-semibold">
                             Quer entrar em <span className="relative before:absolute before:bg-secondary before:w-[90%] before:h-[10px] before:-right-2 before:bottom-1 before:z-[-1] z-10">contato?</span>
@@ -32,7 +49,7 @@ export const Contact = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </div>
