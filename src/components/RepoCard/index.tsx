@@ -4,6 +4,7 @@ import { GoLinkExternal } from 'react-icons/go'
 import { AiOutlineFolder } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import FadeUp from "../Animations/FadeUp"
+import Link from "next/link"
 
 
 type Props = {
@@ -16,7 +17,7 @@ const RepoCard = (props: Props) => {
 
     return(
         <FadeUp>
-            <div className="bg-secondary rounded-lg h-full">
+            <Link href={props.repo.html_url} target="_blank" className="bg-secondary rounded-lg h-full">
                 
                 <div style={{
                     background: 'rgba(47, 47, 47, 1)',
@@ -34,7 +35,7 @@ const RepoCard = (props: Props) => {
                     </div>
                 
                 </div>
-            </div>
+            </Link>
         </FadeUp>
     )
 }
