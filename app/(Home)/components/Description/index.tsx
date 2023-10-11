@@ -89,8 +89,25 @@ export const Description = () => {
                             </div>
                         </div>
                     </div>
-
             </FadeUp>
+                    <div className="grid grid-cols-3 mt-20">
+                        <div className="col-span-1">
+                            <h2 className="font-semibold text-2xl">Torneio iP4y</h2>
+                            <div className="mt-10t">
+                                <p>Mike</p>
+                                <p>Enzo</p>
+                                <p>Victor</p>
+                                <p>Miqueias</p>
+                                <p>Fernando</p>
+                                <p className="line-through">Joao</p>
+                                <p className="line-through">Pedro</p>
+                                <p className="line-through">Weriston</p>
+                            </div>
+                        </div>
+                        <div className="col-span-2">
+                            <iframe src="https://challonge.com/pt_BR/4yz2j4za/module" width="100%" height="500" ></iframe>
+                        </div>
+                    </div>
                 </div>
 
         </div>
