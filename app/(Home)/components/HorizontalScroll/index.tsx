@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, cubicBezier } from "framer-motion";
 import { useRef } from "react";
 import Image from 'next/image';
 import alienlab from '@/src/assets/alienlab/logo.svg'
@@ -15,12 +15,15 @@ const HorizontalScroll = () => {
       target: targetRef,
     });
   
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75.1%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75.1%"], );
   
     return (
-      <section ref={targetRef} className="relative h-[300vh] bg-secondary">
+      <section id="experiencias" ref={targetRef} className="relative h-[300vh] bg-secondary">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex gap-1">
+          <motion.div  style={{
+            x,
+            transition: "transform .2s cubic-bezier(.56,.24,.87,.99)",
+          }} className="flex gap-1">
             <div className="group px-3 relative flex flex-col items-center justify-center bg-black h-[100vh] w-[100vw] overflow-hidden ">
                 <Image src={alienlab} alt='' ></Image>
                 <p className='mt-3 '>Estágio em desenvolvimento <span className='text-secondary font-semibold'>Front-End</span></p>

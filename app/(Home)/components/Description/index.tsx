@@ -6,7 +6,7 @@ import {motion} from 'framer-motion'
 import FadeUp from "@/src/components/Animations/FadeUp";
 export const Description = () => {
     return(
-        <div className="min-h-screen bg-[#0e0e0e] py-10 flex items-center justify-center overflow-x-clip">
+        <div id="sobre" className="min-h-screen bg-[#0e0e0e] py-10 flex items-center justify-center overflow-x-clip">
                 <div className="w-full  max-w-[1500px] px-5">
                 <FadeUp>
                     <div className="bg-secondary">
@@ -18,10 +18,18 @@ export const Description = () => {
                                     <p className="relative font-semibold text-3xl before:absolute before:left-0 before:bg-secondary before:h-full">
                                         <span className="text-secondary">Quem</span> sou eu?
                                     </p>
-                                    <p className="mt-3">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, libero iure! Soluta eligendi quisquam fuga dolorem veniam velit itaque libero eum, nemo accusamus dignissimos adipisci excepturi, commodi nostrum eveniet facere. Reprehenderit provident magnam quo architecto sit, dolores porro rem ipsum iusto pariatur perspiciatis beatae laborum eos corporis nesciunt hic ex!
+                                    <p className="mt-5">
+                                        
+                                    👋 Olá! Sou um dev front-end apaixonado por criar experiências web. Minha jornada tecnológica permeia ReactJS, Tailwind e PHP ( mas aceito desafios 👀 ).
                                     </p>
-                                    <p></p>
+                                    <p className="mt-3">
+
+🚀 Creio que sou uma pessoa proativa e tento buscar constantemente soluções criativas e eficazes. Adoro desafios e estou sempre buscando maneiras de melhorar como um profissional.
+                                    </p>
+
+                                    <p className="mt-3 mb-5">
+🎵 Além do mundo da programação, sou um amante da música. Acredito que a criatividade e paz que a música me proporciona também me ajuda profissionalmente no dia a dia.
+                                    </p>
                                     <div className="grid grid-cols-2">
                                         <div className="col-span-12 md:col-span-1">
 
@@ -90,24 +98,7 @@ export const Description = () => {
                         </div>
                     </div>
             </FadeUp>
-                    <div className="grid grid-cols-3 mt-20">
-                        <div className="col-span-1">
-                            <h2 className="font-semibold text-2xl">Torneio iP4y</h2>
-                            <div className="mt-10t">
-                                <p>Mike</p>
-                                <p>Enzo</p>
-                                <p>Victor</p>
-                                <p>Miqueias</p>
-                                <p>Fernando</p>
-                                <p className="line-through">Joao</p>
-                                <p className="line-through">Pedro</p>
-                                <p className="line-through">Weriston</p>
-                            </div>
-                        </div>
-                        <div className="col-span-2">
-                            <iframe src="https://challonge.com/pt_BR/4yz2j4za/module" width="100%" height="500" ></iframe>
-                        </div>
-                    </div>
+                    
                 </div>
 
         </div>
