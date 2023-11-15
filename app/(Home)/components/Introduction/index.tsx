@@ -25,18 +25,19 @@ export const Introduction = () => {
                     </div>
                     <Button onClick={() => router.push('#sobre')} containerClassName="mt-5">Ver mais</Button>
                 </motion.div>
-                <Link href='mailto:pedro.lucasrv@outlook.com'  className=" right-0 bottom-10  absolute md:left-10 md:bottom-10 after:absolute text-[#616677] hover:-translate-y-2 transition-all hover:text-secondary hover:after:bg-secondary cursor-pointer after:bg-[#616677] after:left-0 after:right-0 after:-bottom-[41px] after:mx-auto after after:z-9 after:h-[24px] after:w-[2px] after:right-0" style={{textOrientation: 'mixed', writingMode: 'vertical-lr'}}>pedro.lucasrv@outlook.com</Link>
-                <div className="absolute left-3 bottom-[40px] md:right-10 md:bottom-10 after:absolute gap-2 text-[#616677]  transition-all  hover:after:bg-secondary cursor-pointer after:bg-[#616677] after:left-0 after:right-0 after:-bottom-[41px] after:mx-auto after after:z-9 after:h-[24px] after:w-[2px] after:right-0 flex " style={{textOrientation: 'mixed', writingMode: 'vertical-lr'}}>
+                <div className="absolute  bottom-[40px] left-10 bottom-10 after:absolute gap-2 text-[#616677]  transition-all  hover:after:bg-secondary cursor-pointer after:bg-[#616677] after:left-0 after:right-0 after:-bottom-[41px] after:mx-auto after after:z-9 after:h-[24px] after:w-[2px] after:right-0 flex " style={{textOrientation: 'mixed', writingMode: 'vertical-lr'}}>
                     <Link href='https://www.linkedin.com/in/pedrolucasrv/' target="_blank"  className="cursor-pointer ">
-                        <IoLogoLinkedin className='hover:-translate-y-[2px] text-[#616677] hover:text-secondary transition-all text-secondary' style={{ height: 22, width: 22}}/>
+                        <IoLogoLinkedin className='hover:-translate-y-[2px] text-[#616677] hover:text-secondary transition-all' style={{ height: 22, width: 22}}/>
                     </Link>
                     <Link href='https://www.instagram.com/pedro.lucasrv/' target="_blank"  className="cursor-pointer ">
-                        <IoLogoInstagram className='hover:-translate-y-[2px] text-[#616677] hover:text-secondary transition-all text-secondary' style={{ height: 22, width: 22}}/>
+                        <IoLogoInstagram className='hover:-translate-y-[2px] text-[#616677] hover:text-secondary transition-all' style={{ height: 22, width: 22}}/>
                     </Link>
                     <Link href='https://github.com/Pedrolucasrv' target="_blank"  className="cursor-pointer ">
-                        <IoLogoGithub className='hover:-translate-y-[2px] text-[#616677] hover:text-secondary transition-all text-secondary' style={{ height: 22, width: 22}}/>
+                        <IoLogoGithub className='hover:-translate-y-[2px] text-[#616677] hover:text-secondary transition-all' style={{ height: 22, width: 22}}/>
                     </Link>
                     </div>
+                <Link href='mailto:pedro.lucasrv@outlook.com'  className="  bottom-10  absolute right-10 bottom-10 after:absolute text-[#616677] hover:-translate-y-2 transition-all hover:text-secondary hover:after:bg-secondary cursor-pointer after:bg-[#616677] after:left-0 after:right-0 after:-bottom-[41px] after:mx-auto after after:z-9 after:h-[24px] after:w-[2px] after:right-0" style={{textOrientation: 'mixed', writingMode: 'vertical-lr'}}>pedro.lucasrv@outlook.com</Link>
+
             </div>
     </div>
     )
