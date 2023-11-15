@@ -12,8 +12,8 @@ export const Description = () => {
                     <div className="bg-secondary">
 
                         <div className="grid grid-cols-12 -translate-y-1 translate-x-1 border-secondary bg-[#0e0e0e] border-2">
-                            <div className="md:col-span-6 col-span-12 px-5">
-                                <div className="flex flex-col py-5 md:py-0 w-full justify-center h-full">
+                            <div className="lg:col-span-6 col-span-12 px-5">
+                                <div className="flex flex-col py-5 lg:py-0 w-full justify-center h-full">
                                    
                                     <p className="relative font-semibold text-3xl before:absolute before:left-0 before:bg-secondary before:h-full">
                                         <span className="text-secondary">Quem</span> sou eu?
@@ -27,11 +27,11 @@ export const Description = () => {
 🚀 Creio que sou uma pessoa proativa e tento buscar constantemente soluções criativas e eficazes. Adoro desafios e estou sempre buscando maneiras de melhorar como um profissional.
                                     </p>
 
-                                    <p className="mt-3 mb-5">
+                                    {/* <p className="mt-3 mb-5">
 🎵 Além do mundo da programação, sou um amante da música. Acredito que a criatividade e paz que a música me proporciona também me ajuda profissionalmente no dia a dia.
-                                    </p>
+                                    </p> */}
                                     <div className="grid grid-cols-2">
-                                        <div className="col-span-12 md:col-span-1">
+                                        <div className="col-span-12 lg:col-span-1">
 
                                         <div className="my-5">
 
@@ -57,7 +57,7 @@ export const Description = () => {
                                             </div>
                                         </div>
                                         </div>
-                                        <div className="col-span-12 md:col-span-1">
+                                        <div className="col-span-12 lg:col-span-1">
 
                                         <div className="my-5">
 
@@ -82,7 +82,7 @@ export const Description = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="md:col-span-6  col-span-12 -order-1  md:order-1 relative">
+                            <div className="lg:col-span-6  col-span-12 -order-1  lg:order-1 relative">
                                 <div className="md:bg-secondary mx-auto flex justify-center relative  pl-1">
                                     <Image style={{objectFit:"contain"}} src={Pedro} alt="" ></Image>
                                 </div>
