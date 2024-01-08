@@ -6,7 +6,7 @@ import IP from "./sections/ip4y";
 import Dinari from "./sections/dinari";
 import Marquee from "react-fast-marquee";
 
-const HorizontalScroll = () => {
+const Experiences = () => {
 
 
     return (
@@ -33,5 +33,5 @@ const HorizontalScroll = () => {
     );
   };
 
-export {HorizontalScroll}
+export {Experiences}
 
