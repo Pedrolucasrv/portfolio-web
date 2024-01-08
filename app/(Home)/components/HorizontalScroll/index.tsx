@@ -1,159 +1,37 @@
 'use client'
 
-import { motion, useTransform, useScroll, cubicBezier, useMotionValue } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import Image from 'next/image';
-import alienlab from '@/src/assets/alienlab/logo.svg'
-import ip4y from '@/src/assets/ip4y/logo.svg'
-import dinari from '@/src/assets/dinari/big-dinari-logo.svg'
-import { Tag } from '@/src/components/Tag';
-import { Button } from '@/src/components/Button';
-import { PiCaretLeft, PiCaretRight } from "react-icons/pi";
+import styles from './sections/alienlab/styles.module.css'
+import AlienLab from "./sections/alienlab";
+import IP from "./sections/ip4y";
+import Dinari from "./sections/dinari";
+import Marquee from "react-fast-marquee";
 
 const HorizontalScroll = () => {
-    const targetRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-      target: targetRef,
-    });
-  
-    const xs = useMotionValue(0)
 
-    const [ currentSlide, setCurrentSlide ] = useState(0)
 
-    const x = useTransform(
-      xs,
-      [0, 1, 2, 3], // Adjust the array size based on the number of sections
-      ["0%", "-25%", "-50%", "-75%"],
-    );
-
-    const nextPage = () => {
-      if(xs.get() < 3){
-        xs.set(xs.get() + 1)
-      }
-    }
-  
-    const previousPage = () => {
-      if(xs.get() > 0 ){
-        xs.set(xs.get() - 1)
-      }
-    }
-
-    xs.on('change', (res) => {
-      setCurrentSlide(res)
-    })
-  
     return (
-      <div className=" relative">
-        <div  onClick={() => previousPage()} className={`${currentSlide == 0 && 'opacity-40'} cursor-pointer border-white transition-all border-[1px] md:border-[2px] w-6 border-[1px] md:h-6  md:h-12 w-6 h-6  md:w-12 hover:-translate-y-1 flex items-center justify-center rounded-full  absolute !z-50 bottom-[50%] m-auto top-[50%] left-2 md:left-8`}>
-          <PiCaretLeft  />
-
-        </div>
-        <div onClick={() => nextPage()} className={` ${currentSlide == 3 && 'opacity-40'} cursor-pointer border-white transition-all border-[1px] md:border-[2px] w-6 border-[1px] md:h-6  md:h-12 w-6 h-6  md:w-12 hover:-translate-y-1 flex items-center justify-center rounded-full  absolute !z-50 bottom-[50%] m-auto top-[50%] right-2 md:right-8`}>
-          <PiCaretRight  />
-        </div>
-
-        <section  id="experiencias" ref={targetRef} className="relative  bg-secondary">
-          <div className=" top-0 flex h-screen items-center overflow-hidden">
-            <motion.div  style={{
-              x,
-              transition: "transform .6s cubic-bezier(.56,.24,.87,.99)",
-            }} className="flex">
-              <div className="group px-16 md:px-3 relative flex flex-col items-center justify-center bg-black h-[100vh] w-[100vw]  overflow-hidden ">
-                  <Image src={alienlab} alt='' ></Image>
-                  <p className='mt-3 text-center md:text-left '>Estágio em desenvolvimento <span className='text-secondary font-semibold '><br className="md:hidden"></br>Front-End</span></p>
-                  <p className='mt-3 text-center md:text-left '>2021 | 2022</p>
-                  <div className='flex gap-3 my-5 flex-wrap justify-center max-w-[400px]'>
-                      <Tag>Wordpress</Tag>
-                      <Tag>ReactJs</Tag>
-                      <Tag>TypeScript</Tag>
-                      <Tag>Sass</Tag>
-                      <Tag>Css.Modules</Tag>
-                  </div>
-                  <div className='w-full absolute opacity-70 '>
-                      <video className='absolute left-0  right-0 mx-auto top-[20vh] md:top-[15vh]' autoPlay muted loop>
-                          <source src='planete-video.mp4' type="video/mp4" />
-                      </video>
-                  </div>
-              </div>
-              <div style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0)), url(/ip4y/bg.png)', backgroundSize:'cover'}} className="group px-16 md:px-3   relative flex flex-col items-center justify-center  h-[100vh] w-[100vw]  overflow-hidden bg-transparent">
-                  <Image src={dinari} alt='' height={70} ></Image>
-                  <p className='mt-3 text-center md:text-left '>Estágio em desenvolvimento <span className='text-secondary font-semibold '><br className="md:hidden"></br>Front-End</span></p>
-
-                  <p className='mt-3 text-center md:text-left '>2022 | 2023</p>
-                  <div className='flex gap-3 my-5 flex-wrap justify-center max-w-[400px]'>
-                      <Tag>Laravel</Tag>
-                      <Tag>PHP</Tag>
-                      <Tag>MySql</Tag>
-                  </div>
-                  <div className='w-full absolute opacity-70 '>
-                      
-                  </div>
-              </div>
-              <div style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0)), url(/ip4y/bg.png)', backgroundSize:'cover'}} className="group px-16 md:px-3   relative flex flex-col items-center justify-center  h-[100vh] w-[100vw]  overflow-hidden bg-transparent">
-                  <Image src={ip4y} alt='' height={70} ></Image>
-                  <p className='mt-3 text-center md:text-left '>Desenvolvedor <span className='text-secondary font-semibold '><br className="md:hidden"></br>Full-Stack</span> Junior</p>
-                  <p className='mt-3 text-center md:text-left '>2023 | <span className="text-secondary font-semibold"> Atualmente</span></p>
-                  <div className='flex gap-3 my-5 flex-wrap justify-center max-w-[400px]'>
-                      <Tag>Laravel</Tag>
-                      <Tag>ReactJs</Tag>
-                      <Tag>React Native</Tag>
-                      <Tag>TypeScript</Tag>
-                      <Tag>Css.Modules</Tag>
-                  </div>
-                  <div className='w-full absolute opacity-70 '>
-                      
-                  </div>
-              </div>
+      <div className="">
+        <div className=" relative z-10 rotate-[-10deg] pt-32 mb-20 overflow-visible w-[110vw] left-[-5vw]">
+          <Marquee autoFill  direction="right" className="flex gap-5">
+            <h2 className={` ${styles.headline} text-[40pt] uppercase font-semibold italic `}>Experiências <span className="text-[40pt] uppercase font-semibold italic mx-3">*</span></h2>
             
-              <div className="group relative flex flex-col items-start  justify-center  h-[100vh] w-[100vw] overflow-hidden bg-neutral-900 ">
-                  <div className='flex justify-center items-center flex-col w-full'>
-
-                      <p className='text-lg md:text-2xl mb-4'>A próxima pode ser <span className='text-secondary font-semibold'>sua empresa!</span></p>
-                      <Button>Entrar em contato</Button>
-                  </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-
-    );
-  };
-  
-  const Card = ( card : {url:string, title:string, id: string}) => {
-    return (
-      <div
-        key={card.id}
-        className="group relative h-[100vh] w-[100vw] overflow-hidden bg-neutral-200"
-      >
-        <div
-          style={{
-            backgroundImage: `url(${card.url})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-        ></div>
-        <div className="absolute inset-0 z-10 grid place-content-center">
-          <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-            {card.title}
-          </p>
+          </Marquee>
+          <Marquee autoFill  direction="left" className="flex gap-5">
+            <h2 className={` ${styles.headline} text-[40pt] uppercase font-semibold italic `}>Experiências <span className="text-[40pt] uppercase font-semibold italic mx-3">*</span></h2>
+            
+          </Marquee>
         </div>
+        <AlienLab></AlienLab>
+        <div className="overflow-hidden">
+          <Dinari></Dinari>
+        </div>
+        <div className="overflow-hidden">
+          <IP></IP>
+        </div>
+    
       </div>
     );
   };
-  
-  export default HorizontalScroll
-  
-  const cards = [
-    {
-      url: "/imgs/abstract/1.jpg",
-      title: "Title 1",
-      id: 1,
-    },
-    {
-      url: "/imgs/abstract/2.jpg",
-      title: "Title 2",
-      id: 2,
-    }
-  ];
+
+export {HorizontalScroll}
+

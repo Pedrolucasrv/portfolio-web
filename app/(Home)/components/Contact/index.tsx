@@ -12,7 +12,7 @@ import Link from "next/link";
 export const Contact = () => {
     return(
         <div id="contato" style={{background:'linear-gradient(391deg, #fdcd3b 50%, #ffed4b 50%)'}} 
-       className=" py-[200px] px-5 flex justify-center relative items-center bg-accent">
+       className="py-[200px] px-5 flex justify-center relative items-center bg-accent">
             <div className="bg-accent relative cursor-grab ">
             <div className="absolute flex flex-col justify-center items-center w-full h-full">
                 <p className="text-white font-semibold mt-3">Para de puxar aí, por favor.</p>
