@@ -4,7 +4,7 @@ import { Button } from "@/src/components/Button";
 import RepoCard from "@/src/components/RepoCard";
 import { getRepos } from "@/src/services/githubServices";
 import { Repos } from "@/src/types/githubTypes";
-import styles from '@/app/(Home)/components/HorizontalScroll/sections/alienlab/styles.module.css'
+import styles from '@/app/(Home)/components/Experiences/sections/alienlab/styles.module.css'
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { IoLogoGithub } from "react-icons/io";

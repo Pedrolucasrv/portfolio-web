@@ -5,7 +5,7 @@ import Pedro from '@/src/assets/pedro.jpg'
 import {motion} from 'framer-motion'
 import FadeUp from "@/src/components/Animations/FadeUp";
 import Marquee from "react-fast-marquee";
-import styles from '../HorizontalScroll/sections/alienlab/styles.module.css'
+import styles from '../Experiences/sections/alienlab/styles.module.css'
 
 export const Description = () => {
     return(
