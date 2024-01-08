@@ -45,9 +45,11 @@ export default function IP() {
           <div className="flex justify-center xl:block">
             <span className="mb-2 hidden xl:block">Habilidades:</span>
             <div className="flex gap-3 my-5 flex-wrap justify-center xl:justify-start max-w-[400px]">
-              <Tag>Wordpress</Tag>
               <Tag>ReactJs</Tag>
-              <Tag>GSAP</Tag>
+              <Tag>NextJS</Tag>
+              <Tag>React Native</Tag>
+              <Tag>Framer Motion</Tag>
+              <Tag>Laravel</Tag>
               <Tag>TypeScript</Tag>
               <Tag>Css.Modules</Tag>
             </div>
