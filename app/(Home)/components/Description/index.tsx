@@ -24,7 +24,7 @@ export const Description = () => {
       className="min-h-screen bg-black border-t-2 border-secondary  py-10 flex items-center justify-center overflow-x-clip"
     >
       <div className="w-full  ">
-        <Marquee direction="right" style={{ gap: 110 }}>
+        <Marquee direction="left" style={{ gap: 110 }}>
           <p
             className={`${styles.companyTitle} mb-3 md:mb-0 italic font-extrabold outline-2 outline-red-700 stroke-2 stroke-red-700 text-[100pt] md:text-[250pt] mt-10 md:mt-0 `}
           >
