@@ -21,12 +21,12 @@ const Experiences = () => {
             
           </Marquee>
         </div>
-        <AlienLab></AlienLab>
+          <IP></IP>
         <div className="overflow-hidden">
           <Dinari></Dinari>
         </div>
         <div className="overflow-hidden">
-          <IP></IP>
+        <AlienLab></AlienLab>
         </div>
     
       </div>

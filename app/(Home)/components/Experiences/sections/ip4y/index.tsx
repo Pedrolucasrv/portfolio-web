@@ -57,7 +57,7 @@ export default function IP() {
         </div>
       </div>
 
-      <div className="absolute -top-36 scale-125 rotate-[-15deg]">
+      <div className="absolute -top-0 scale-125 rotate-[-10deg]">
         {Array(20).fill(
           <p
             className={` ${styles.companyBg} whitespace-nowrap overflow-hidden italic`}
