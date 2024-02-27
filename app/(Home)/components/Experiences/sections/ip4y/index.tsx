@@ -31,8 +31,7 @@ export default function IP() {
               Desenvolvedor
               <span className="text-secondary font-semibold ">
                 <br className="md:hidden"></br> Full-Stack
-              </span>{" "}
-              Junior
+              </span>
             </p>
           </div>
           <div>
